@@ -73,6 +73,19 @@ body {
   width: 100%;
 }
 
+/* Responsive content width */
+@media (min-width: 1280px) {
+  .content-narrow {
+    max-width: 1200px;
+  }
+}
+
+@media (min-width: 1536px) {
+  .content-narrow {
+    max-width: 1300px;
+  }
+}
+
 ::selection {
   background-color: var(--color-accent);
   color: var(--color-bg-primary);
