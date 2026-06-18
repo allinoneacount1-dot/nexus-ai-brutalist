@@ -1,59 +1,61 @@
 ---
-// Footer - centered content
+// Footer - full width, centered content
 ---
 
-<footer class="border-t border-[var(--color-border)]">
-  <div class="max-w-[1400px] mx-auto px-6 md:px-12 py-12 md:py-16">
-    <div class="grid grid-cols-1 md:grid-cols-3 gap-12 mb-12">
-      <!-- Brand -->
-      <div class="text-center md:text-left">
-        <div class="macro-type text-xl mb-6">NEXUS AI</div>
-        <div class="data-readout text-base">
-          TACTICAL INTELLIGENCE<br/>
-          EXTRACTION SYSTEM
+<footer class="border-t border-[var(--color-border)] w-full">
+  <div class="w-full px-6 md:px-12 lg:px-20 py-12 md:py-16">
+    <div class="max-w-[1600px] mx-auto">
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-12 mb-12">
+        <!-- Brand -->
+        <div class="text-center md:text-left">
+          <div class="macro-type text-xl mb-6">NEXUS AI</div>
+          <div class="data-readout text-base">
+            TACTICAL INTELLIGENCE<br/>
+            EXTRACTION SYSTEM
+          </div>
+        </div>
+
+        <!-- Links -->
+        <div class="text-center">
+          <div class="micro-type mb-6 text-[var(--color-accent)]">Navigation</div>
+          <div class="space-y-3">
+            <div><a href="#telemetry" class="data-readout text-base hover:text-[var(--color-fg-primary)] transition-colors">/// Telemetry</a></div>
+            <div><a href="#capabilities" class="data-readout text-base hover:text-[var(--color-fg-primary)] transition-colors">/// Capabilities</a></div>
+            <div><a href="#stats" class="data-readout text-base hover:text-[var(--color-fg-primary)] transition-colors">/// Analytics</a></div>
+            <div><a href="#access" class="data-readout text-base hover:text-[var(--color-fg-primary)] transition-colors">/// Request Access</a></div>
+          </div>
+        </div>
+
+        <!-- Status -->
+        <div class="text-center md:text-right">
+          <div class="micro-type mb-6 text-[var(--color-accent)]">System Status</div>
+          <div class="space-y-3">
+            <div class="flex items-center justify-center md:justify-end gap-3">
+              <span class="data-readout text-base">Neural Engine: Online</span>
+              <span class="text-[var(--color-terminal-green)]" aria-hidden="true">●</span>
+            </div>
+            <div class="flex items-center justify-center md:justify-end gap-3">
+              <span class="data-readout text-base">Data Pipeline: Active</span>
+              <span class="text-[var(--color-terminal-green)]" aria-hidden="true">●</span>
+            </div>
+            <div class="flex items-center justify-center md:justify-end gap-3">
+              <span class="data-readout text-base">Inference Node: Ready</span>
+              <span class="text-[var(--color-terminal-green)]" aria-hidden="true">●</span>
+            </div>
+          </div>
         </div>
       </div>
 
-      <!-- Links -->
-      <div class="text-center">
-        <div class="micro-type mb-6 text-[var(--color-accent)]">Navigation</div>
-        <div class="space-y-3">
-          <div><a href="#telemetry" class="data-readout text-base hover:text-[var(--color-fg-primary)] transition-colors">/// Telemetry</a></div>
-          <div><a href="#capabilities" class="data-readout text-base hover:text-[var(--color-fg-primary)] transition-colors">/// Capabilities</a></div>
-          <div><a href="#stats" class="data-readout text-base hover:text-[var(--color-fg-primary)] transition-colors">/// Analytics</a></div>
-          <div><a href="#access" class="data-readout text-base hover:text-[var(--color-fg-primary)] transition-colors">/// Request Access</a></div>
-        </div>
-      </div>
-
-      <!-- Status -->
-      <div class="text-center md:text-right">
-        <div class="micro-type mb-6 text-[var(--color-accent)]">System Status</div>
-        <div class="space-y-3">
-          <div class="flex items-center justify-center md:justify-end gap-3">
-            <span class="data-readout text-base">Neural Engine: Online</span>
-            <span class="text-[var(--color-terminal-green)]" aria-hidden="true">●</span>
+      <!-- Bottom bar -->
+      <div class="border-t border-[var(--color-border)] pt-8">
+        <div class="flex flex-wrap items-center justify-center gap-4">
+          <div class="data-readout text-base">
+            © {new Date().getFullYear()} NEXUS AI SYSTEMS // ALL RIGHTS RESERVED
           </div>
-          <div class="flex items-center justify-center md:justify-end gap-3">
-            <span class="data-readout text-base">Data Pipeline: Active</span>
-            <span class="text-[var(--color-terminal-green)]" aria-hidden="true">●</span>
+          <div class="text-[var(--color-border)]" aria-hidden="true">|</div>
+          <div class="data-readout text-base">
+            REV 2.6 // CLASSIFICATION: PUBLIC
           </div>
-          <div class="flex items-center justify-center md:justify-end gap-3">
-            <span class="data-readout text-base">Inference Node: Ready</span>
-            <span class="text-[var(--color-terminal-green)]" aria-hidden="true">●</span>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- Bottom bar -->
-    <div class="border-t border-[var(--color-border)] pt-8">
-      <div class="flex flex-wrap items-center justify-center gap-4">
-        <div class="data-readout text-base">
-          © {new Date().getFullYear()} NEXUS AI SYSTEMS // ALL RIGHTS RESERVED
-        </div>
-        <div class="text-[var(--color-border)]" aria-hidden="true">|</div>
-        <div class="data-readout text-base">
-          REV 2.6 // CLASSIFICATION: PUBLIC
         </div>
       </div>
     </div>
