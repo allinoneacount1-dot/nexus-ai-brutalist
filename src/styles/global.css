@@ -60,35 +60,54 @@ body {
   position: relative;
   overflow-x: hidden;
   width: 100%;
-}
-
-/* Full width centered container */
-.site-container {
-  width: 100%;
-  max-width: 100%;
-  margin: 0 auto;
-}
-
-.site-container > * {
-  width: 100%;
-}
-
-/* Responsive content width */
-@media (min-width: 1280px) {
-  .content-narrow {
-    max-width: 1200px;
-  }
-}
-
-@media (min-width: 1536px) {
-  .content-narrow {
-    max-width: 1300px;
-  }
+  background-color: var(--color-bg-primary);
 }
 
 ::selection {
   background-color: var(--color-accent);
   color: var(--color-bg-primary);
+}
+
+/* Centered content wrapper - works at ALL sizes */
+.wrap {
+  width: 100%;
+  max-width: 960px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+}
+
+@media (min-width: 768px) {
+  .wrap {
+    max-width: 1100px;
+    padding-left: 3rem;
+    padding-right: 3rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .wrap {
+    max-width: 1200px;
+    padding-left: 4rem;
+    padding-right: 4rem;
+  }
+}
+
+@media (min-width: 1280px) {
+  .wrap {
+    max-width: 1300px;
+    padding-left: 5rem;
+    padding-right: 5rem;
+  }
+}
+
+@media (min-width: 1536px) {
+  .wrap {
+    max-width: 1400px;
+    padding-left: 6rem;
+    padding-right: 6rem;
+  }
 }
 
 /* Skip to content */
@@ -145,7 +164,7 @@ body {
   background-size: 256px 256px;
 }
 
-/* Reduced motion: disable all overlays and animations */
+/* Reduced motion */
 @media (prefers-reduced-motion: reduce) {
   .scanlines::before,
   .noise::after {
@@ -197,7 +216,6 @@ body {
 .accent-line {
   height: 3px;
   background-color: var(--color-accent);
-  width: 100%;
 }
 
 /* Warning stripe */
@@ -263,11 +281,6 @@ body {
   width: 100%;
   height: 1px;
   background-color: var(--color-border);
-}
-
-.sep-thick {
-  height: 2px;
-  background-color: var(--color-border-strong);
 }
 
 /* Ticker marquee */

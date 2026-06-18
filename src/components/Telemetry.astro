@@ -1,22 +1,18 @@
 ---
-// Telemetry - full width, centered content
+// Telemetry
 ---
 
-<section id="telemetry" class="border-b border-[var(--color-border)] w-full bg-[var(--color-bg-primary)]">
-  <div class="w-full">
-    <!-- Section header -->
-    <div class="border-b border-[var(--color-border)] px-6 md:px-12 lg:px-20 xl:px-32 py-5">
-      <div class="flex items-center justify-center gap-4 content-narrow mx-auto">
-        <span class="text-[var(--color-fg-secondary)]" aria-hidden="true">[</span>
-        <h2 class="macro-type text-lg md:text-xl">Telemetry</h2>
-        <span class="text-[var(--color-fg-secondary)]" aria-hidden="true">]</span>
-        <span class="micro-type text-[10px]">LIVE FEED</span>
-      </div>
+<section id="telemetry" class="border-b border-[var(--color-border)] bg-[var(--color-bg-primary)]">
+  <div class="wrap py-5">
+    <div class="flex items-center justify-center gap-4 mb-0">
+      <span class="text-[var(--color-fg-secondary)]" aria-hidden="true">[</span>
+      <h2 class="macro-type text-lg md:text-xl">Telemetry</h2>
+      <span class="text-[var(--color-fg-secondary)]" aria-hidden="true">]</span>
+      <span class="micro-type text-[10px]">LIVE FEED</span>
     </div>
-
-    <!-- Telemetry grid - 3 equal columns, centered -->
+  </div>
+  <div class="border-t border-b border-[var(--color-border)]">
     <div class="brutalist-grid grid-cols-1 md:grid-cols-3">
-      <!-- Panel 1 -->
       <div class="p-8 md:p-14 text-center">
         <div class="micro-type mb-6 text-[var(--color-accent)]">Neural Processing</div>
         <div class="macro-type text-7xl md:text-8xl mb-4">847</div>
@@ -37,8 +33,6 @@
           </div>
         </div>
       </div>
-
-      <!-- Panel 2 -->
       <div class="p-8 md:p-14 text-center">
         <div class="micro-type mb-6 text-[var(--color-accent)]">Model Performance</div>
         <div class="macro-type text-7xl md:text-8xl mb-4">97.3<span class="text-3xl">%</span></div>
@@ -59,8 +53,6 @@
           </div>
         </div>
       </div>
-
-      <!-- Panel 3 -->
       <div class="p-8 md:p-14 text-center">
         <div class="micro-type mb-6 text-[var(--color-accent)]">System Health</div>
         <div class="macro-type text-7xl md:text-8xl mb-4">99.97<span class="text-3xl">%</span></div>
@@ -72,40 +64,32 @@
               <span class="data-readout text-[var(--color-fg-primary)]">CPU</span>
               <span class="data-readout text-[var(--color-terminal-green)]">23.4%</span>
             </div>
-            <div class="h-1.5 bg-[var(--color-border)]">
-              <div class="h-full bg-[var(--color-terminal-green)]" style="width: 23.4%"></div>
-            </div>
+            <div class="h-1.5 bg-[var(--color-border)]"><div class="h-full bg-[var(--color-terminal-green)]" style="width: 23.4%"></div></div>
           </div>
           <div>
             <div class="flex items-center justify-between mb-2">
               <span class="data-readout text-[var(--color-fg-primary)]">MEMORY</span>
               <span class="data-readout text-[var(--color-terminal-green)]">67.2%</span>
             </div>
-            <div class="h-1.5 bg-[var(--color-border)]">
-              <div class="h-full bg-[var(--color-terminal-green)]" style="width: 67.2%"></div>
-            </div>
+            <div class="h-1.5 bg-[var(--color-border)]"><div class="h-full bg-[var(--color-terminal-green)]" style="width: 67.2%"></div></div>
           </div>
           <div>
             <div class="flex items-center justify-between mb-2">
               <span class="data-readout text-[var(--color-fg-primary)]">GPU</span>
               <span class="data-readout text-[var(--color-terminal-green)]">89.1%</span>
             </div>
-            <div class="h-1.5 bg-[var(--color-border)]">
-              <div class="h-full bg-[var(--color-accent)]" style="width: 89.1%"></div>
-            </div>
+            <div class="h-1.5 bg-[var(--color-border)]"><div class="h-full bg-[var(--color-accent)]" style="width: 89.1%"></div></div>
           </div>
         </div>
       </div>
     </div>
-
-    <!-- Bottom status -->
-    <div class="border-t border-[var(--color-border)] px-6 md:px-12 lg:px-20 xl:px-32 py-4">
-      <div class="flex items-center justify-center gap-4 content-narrow mx-auto">
-        <span class="text-[var(--color-terminal-green)]" aria-hidden="true">●</span>
-        <span class="data-readout">ALL SYSTEMS NOMINAL</span>
-        <span class="text-[var(--color-border)]" aria-hidden="true">|</span>
-        <span class="data-readout">LAST UPDATE: {new Date().toLocaleTimeString('en-US', { hour12: false })} UTC</span>
-      </div>
+  </div>
+  <div class="wrap py-4">
+    <div class="flex items-center justify-center gap-4">
+      <span class="text-[var(--color-terminal-green)]" aria-hidden="true">●</span>
+      <span class="data-readout">ALL SYSTEMS NOMINAL</span>
+      <span class="text-[var(--color-border)]" aria-hidden="true">|</span>
+      <span class="data-readout">LAST UPDATE: {new Date().toLocaleTimeString('en-US', { hour12: false })} UTC</span>
     </div>
   </div>
 </section>

@@ -1,79 +1,49 @@
 ---
-// Capabilities - full width, centered content
+// Capabilities
 ---
 
-<section id="capabilities" class="border-b border-[var(--color-border)] w-full bg-[var(--color-bg-primary)]">
-  <div class="w-full">
-    <!-- Section header -->
-    <div class="border-b border-[var(--color-border)] px-6 md:px-12 lg:px-20 xl:px-32 py-5">
-      <div class="flex items-center justify-center gap-4 content-narrow mx-auto">
-        <span class="text-[var(--color-fg-secondary)]" aria-hidden="true">[</span>
-        <h2 class="macro-type text-lg md:text-xl">Capabilities</h2>
-        <span class="text-[var(--color-fg-secondary)]" aria-hidden="true">]</span>
-        <span class="micro-type text-[10px]">MODULE INDEX</span>
-      </div>
+<section id="capabilities" class="border-b border-[var(--color-border)] bg-[var(--color-bg-primary)]">
+  <div class="wrap py-5">
+    <div class="flex items-center justify-center gap-4">
+      <span class="text-[var(--color-fg-secondary)]" aria-hidden="true">[</span>
+      <h2 class="macro-type text-lg md:text-xl">Capabilities</h2>
+      <span class="text-[var(--color-fg-secondary)]" aria-hidden="true">]</span>
+      <span class="micro-type text-[10px]">MODULE INDEX</span>
     </div>
-
-    <!-- Capabilities grid - 2x2 -->
+  </div>
+  <div class="border-t border-b border-[var(--color-border)]">
     <div class="brutalist-grid grid-cols-1 md:grid-cols-2">
-      <!-- Capability 1 -->
       <div class="p-8 md:p-14 text-center">
         <div class="macro-type text-6xl md:text-7xl text-[var(--color-accent)] mb-8">01</div>
         <h3 class="macro-type text-2xl md:text-3xl mb-6">Predictive Analytics</h3>
-        <p class="data-readout leading-relaxed mb-8 text-base max-w-sm mx-auto">
-          Advanced machine learning models trained on 42.8B tokens of market data, 
-          social sentiment, and on-chain metrics.
-        </p>
+        <p class="data-readout leading-relaxed mb-8 text-base max-w-sm mx-auto">Advanced machine learning models trained on 42.8B tokens of market data, social sentiment, and on-chain metrics.</p>
         <div class="data-readout text-[var(--color-terminal-green)]">● ACTIVE</div>
         <div class="sep my-6"></div>
-        <div class="data-readout text-[var(--color-fg-primary)]">
-          F1: 0.967 // AUC-ROC: 0.984
-        </div>
+        <div class="data-readout text-[var(--color-fg-primary)]">F1: 0.967 // AUC-ROC: 0.984</div>
       </div>
-
-      <!-- Capability 2 -->
       <div class="p-8 md:p-14 text-center">
         <div class="macro-type text-6xl md:text-7xl text-[var(--color-accent)] mb-8">02</div>
         <h3 class="macro-type text-2xl md:text-3xl mb-6">Risk Assessment</h3>
-        <p class="data-readout leading-relaxed mb-8 text-base max-w-sm mx-auto">
-          Multi-factor risk scoring engine analyzing portfolio exposure, 
-          correlation matrices, and volatility regimes.
-        </p>
+        <p class="data-readout leading-relaxed mb-8 text-base max-w-sm mx-auto">Multi-factor risk scoring engine analyzing portfolio exposure, correlation matrices, and volatility regimes.</p>
         <div class="data-readout text-[var(--color-terminal-green)]">● ACTIVE</div>
         <div class="sep my-6"></div>
-        <div class="data-readout text-[var(--color-fg-primary)]">
-          SHARPE: 2.34 // SORTINO: 3.12
-        </div>
+        <div class="data-readout text-[var(--color-fg-primary)]">SHARPE: 2.34 // SORTINO: 3.12</div>
       </div>
-
-      <!-- Capability 3 -->
       <div class="p-8 md:p-14 text-center">
         <div class="macro-type text-6xl md:text-7xl text-[var(--color-accent)] mb-8">03</div>
         <h3 class="macro-type text-2xl md:text-3xl mb-6">Sentiment Analysis</h3>
-        <p class="data-readout leading-relaxed mb-8 text-base max-w-sm mx-auto">
-          Natural language processing across 50+ data sources including 
-          social media, news feeds, and developer activity.
-        </p>
+        <p class="data-readout leading-relaxed mb-8 text-base max-w-sm mx-auto">Natural language processing across 50+ data sources including social media, news feeds, and developer activity.</p>
         <div class="data-readout text-[var(--color-terminal-green)]">● ACTIVE</div>
         <div class="sep my-6"></div>
-        <div class="data-readout text-[var(--color-fg-primary)]">
-          SOURCES: 53 // CONFIDENCE: 0.91
-        </div>
+        <div class="data-readout text-[var(--color-fg-primary)]">SOURCES: 53 // CONFIDENCE: 0.91</div>
       </div>
-
-      <!-- Capability 4 -->
       <div class="p-8 md:p-14 text-center">
         <div class="macro-type text-6xl md:text-7xl text-[var(--color-accent)] mb-8">04</div>
         <h3 class="macro-type text-2xl md:text-3xl mb-6">Portfolio Optimization</h3>
-        <p class="data-readout leading-relaxed mb-8 text-base max-w-sm mx-auto">
-          Mean-variance optimization with constraints. Dynamic rebalancing 
-          based on regime detection.
-        </p>
+        <p class="data-readout leading-relaxed mb-8 text-base max-w-sm mx-auto">Mean-variance optimization with constraints. Dynamic rebalancing based on regime detection.</p>
         <div class="data-readout text-[var(--color-terminal-green)]">● ACTIVE</div>
         <div class="sep my-6"></div>
-        <div class="data-readout text-[var(--color-fg-primary)]">
-          ALPHA: +3.2% // DRAWDOWN: -4.1%
-        </div>
+        <div class="data-readout text-[var(--color-fg-primary)]">ALPHA: +3.2% // DRAWDOWN: -4.1%</div>
       </div>
     </div>
   </div>
