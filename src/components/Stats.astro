@@ -1,5 +1,5 @@
 ---
-// Stats section - large numbers with monospace
+// Stats - unique metrics, scrolling ticker
 ---
 
 <section id="stats" class="border-b border-[var(--color-border)]">
@@ -8,44 +8,64 @@
     <div class="border-b border-[var(--color-border)] px-4 md:px-8 py-4">
       <div class="flex items-center justify-between">
         <h2 class="macro-type text-lg md:text-xl">
-          <span class="ascii-frame">Analytics</span>
+          <span class="text-[var(--color-fg-secondary)]">[ </span>Analytics<span class="text-[var(--color-fg-secondary)]"> ]</span>
         </h2>
         <span class="micro-type text-[10px]">AGGREGATE METRICS</span>
       </div>
     </div>
 
-    <!-- Stats grid -->
+    <!-- Stats grid - full-width equal columns -->
     <div class="brutalist-grid grid-cols-2 md:grid-cols-4">
       <div class="p-6 md:p-8 text-center">
-        <div class="macro-type text-4xl md:text-6xl mb-2">$4.2<span class="text-xl md:text-2xl">B</span></div>
+        <div class="macro-type text-4xl md:text-5xl mb-2">$4.2<span class="text-lg md:text-xl">B</span></div>
         <div class="data-readout">Assets Under Analysis</div>
       </div>
-      <div class="p-6 md:p-8 text-center border-l border-[var(--color-border)]">
-        <div class="macro-type text-4xl md:text-6xl mb-2">2.8<span class="text-xl md:text-2xl">M</span></div>
+      <div class="p-6 md:p-8 text-center">
+        <div class="macro-type text-4xl md:text-5xl mb-2">2.8<span class="text-lg md:text-xl">M</span></div>
         <div class="data-readout">Models Trained</div>
       </div>
-      <div class="p-6 md:p-8 text-center border-l border-[var(--color-border)]">
-        <div class="macro-type text-4xl md:text-6xl mb-2">142<span class="text-xl md:text-2xl">ms</span></div>
-        <div class="data-readout">Avg Inference Time</div>
+      <div class="p-6 md:p-8 text-center">
+        <div class="macro-type text-4xl md:text-5xl mb-2">312</div>
+        <div class="data-readout">Active Deployments</div>
       </div>
-      <div class="p-6 md:p-8 text-center border-l border-[var(--color-border)]">
-        <div class="macro-type text-4xl md:text-6xl mb-2">97.3<span class="text-xl md:text-2xl">%</span></div>
-        <div class="data-readout">Prediction Accuracy</div>
+      <div class="p-6 md:p-8 text-center">
+        <div class="macro-type text-4xl md:text-5xl mb-2">18<span class="text-lg md:text-xl">ms</span></div>
+        <div class="data-readout">Edge Response Time</div>
       </div>
     </div>
 
-    <!-- Bottom ticker -->
-    <div class="border-t border-[var(--color-border)] px-4 md:px-8 py-3 overflow-hidden">
-      <div class="flex items-center gap-8 animate-pulse">
-        <span class="data-readout whitespace-nowrap">BTC: $67,842.31</span>
-        <span class="text-[var(--color-border)]">|</span>
-        <span class="data-readout whitespace-nowrap">ETH: $3,891.47</span>
-        <span class="text-[var(--color-border)]">|</span>
-        <span class="data-readout whitespace-nowrap">SOL: $187.23</span>
-        <span class="text-[var(--color-border)]">|</span>
-        <span class="data-readout whitespace-nowrap">Market Cap: $2.84T</span>
-        <span class="text-[var(--color-border)]">|</span>
-        <span class="data-readout whitespace-nowrap whitespace-nowrap">24H VOL: $89.2B</span>
+    <!-- Scrolling ticker -->
+    <div class="border-t border-[var(--color-border)] py-3 overflow-hidden">
+      <div class="ticker-track" aria-label="Live cryptocurrency prices">
+        <span class="data-readout whitespace-nowrap px-4">BTC: $67,842.31 <span class="text-[var(--color-terminal-green)]">+2.4%</span></span>
+        <span class="text-[var(--color-border)] px-2" aria-hidden="true">|</span>
+        <span class="data-readout whitespace-nowrap px-4">ETH: $3,891.47 <span class="text-[var(--color-terminal-green)]">+1.8%</span></span>
+        <span class="text-[var(--color-border)] px-2" aria-hidden="true">|</span>
+        <span class="data-readout whitespace-nowrap px-4">SOL: $187.23 <span class="text-[var(--color-accent)]">-0.7%</span></span>
+        <span class="text-[var(--color-border)] px-2" aria-hidden="true">|</span>
+        <span class="data-readout whitespace-nowrap px-4">AVAX: $42.18 <span class="text-[var(--color-terminal-green)]">+3.1%</span></span>
+        <span class="text-[var(--color-border)] px-2" aria-hidden="true">|</span>
+        <span class="data-readout whitespace-nowrap px-4">Market Cap: $2.84T</span>
+        <span class="text-[var(--color-border)] px-2" aria-hidden="true">|</span>
+        <span class="data-readout whitespace-nowrap px-4">24H VOL: $89.2B</span>
+        <span class="text-[var(--color-border)] px-2" aria-hidden="true">|</span>
+        <span class="data-readout whitespace-nowrap px-4">BTC.D: 54.2%</span>
+        <span class="text-[var(--color-border)] px-2" aria-hidden="true">|</span>
+        <!-- Duplicate for seamless loop -->
+        <span class="data-readout whitespace-nowrap px-4">BTC: $67,842.31 <span class="text-[var(--color-terminal-green)]">+2.4%</span></span>
+        <span class="text-[var(--color-border)] px-2" aria-hidden="true">|</span>
+        <span class="data-readout whitespace-nowrap px-4">ETH: $3,891.47 <span class="text-[var(--color-terminal-green)]">+1.8%</span></span>
+        <span class="text-[var(--color-border)] px-2" aria-hidden="true">|</span>
+        <span class="data-readout whitespace-nowrap px-4">SOL: $187.23 <span class="text-[var(--color-accent)]">-0.7%</span></span>
+        <span class="text-[var(--color-border)] px-2" aria-hidden="true">|</span>
+        <span class="data-readout whitespace-nowrap px-4">AVAX: $42.18 <span class="text-[var(--color-terminal-green)]">+3.1%</span></span>
+        <span class="text-[var(--color-border)] px-2" aria-hidden="true">|</span>
+        <span class="data-readout whitespace-nowrap px-4">Market Cap: $2.84T</span>
+        <span class="text-[var(--color-border)] px-2" aria-hidden="true">|</span>
+        <span class="data-readout whitespace-nowrap px-4">24H VOL: $89.2B</span>
+        <span class="text-[var(--color-border)] px-2" aria-hidden="true">|</span>
+        <span class="data-readout whitespace-nowrap px-4">BTC.D: 54.2%</span>
+        <span class="text-[var(--color-border)] px-2" aria-hidden="true">|</span>
       </div>
     </div>
   </div>

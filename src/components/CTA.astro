@@ -1,55 +1,43 @@
 ---
-// CTA section - warning stripe, call to action
+// CTA - single warning stripe instance, different layout (centered)
 ---
 
 <section id="access" class="border-b border-[var(--color-border)]">
-  <!-- Warning stripe -->
-  <div class="warning-stripe"></div>
-
-  <div class="max-w-[1400px] mx-auto px-4 md:px-8 py-12 md:py-24">
-    <div class="grid grid-cols-1 lg:grid-cols-[2fr_1fr] gap-8 lg:gap-16">
-      <!-- Left: CTA content -->
-      <div>
-        <div class="micro-type mb-4 text-[var(--color-accent)]">Access Request</div>
-        <h2 class="macro-type type-display mb-4 md:mb-6">
-          REQUEST<br/>
-          <span class="text-[var(--color-accent)]">ACCESS</span>
-        </h2>
-        <p class="type-sub font-mono text-[var(--color-fg-secondary)] max-w-[50ch] uppercase tracking-wider leading-relaxed mb-8">
-          Limited availability. System access granted to qualified entities 
-          with demonstrated institutional requirements.
-        </p>
-        <div class="flex flex-wrap gap-4">
-          <a href="#" class="btn-brutalist-accent btn-brutalist">
-            [ Request Access → ]
-          </a>
-          <a href="#" class="btn-brutalist">
-            [ Documentation ]
-          </a>
-        </div>
+  <div class="max-w-[1400px] mx-auto px-4 md:px-8 py-16 md:py-32">
+    <!-- Centered layout - different from hero's 2-col -->
+    <div class="max-w-2xl mx-auto text-center">
+      <div class="micro-type mb-6 text-[var(--color-accent)]">Access Request</div>
+      <h2 class="macro-type type-display mb-6">
+        REQUEST<br/>
+        <span class="text-[var(--color-accent)]">ACCESS</span>
+      </h2>
+      <p class="type-sub font-mono text-[var(--color-fg-secondary)] uppercase tracking-wider leading-relaxed mb-10 mx-auto">
+        Limited availability. System access granted to qualified entities 
+        with demonstrated institutional requirements.
+      </p>
+      <div class="flex flex-wrap justify-center gap-4 mb-12">
+        <a href="#" class="btn-brutalist-accent btn-brutalist">[ Request Access → ]</a>
+        <a href="#" class="btn-brutalist">[ Documentation ]</a>
       </div>
+    </div>
 
-      <!-- Right: Requirements panel -->
-      <div class="border border-[var(--color-border)] p-4 md:p-6">
-        <div class="micro-type mb-4 text-[var(--color-accent)]">Requirements</div>
-        <div class="space-y-4 data-readout">
-          <div class="border-b border-[var(--color-border)] pb-3">
-            <div class="text-[var(--color-fg-primary)] mb-1">Minimum Capital</div>
-            <div>$1,000,000 AUM</div>
-          </div>
-          <div class="border-b border-[var(--color-border)] pb-3">
-            <div class="text-[var(--color-fg-primary)] mb-1">Entity Type</div>
-            <div>Registered Investment Fund</div>
-          </div>
-          <div class="border-b border-[var(--color-border)] pb-3">
-            <div class="text-[var(--color-fg-primary)] mb-1">Jurisdiction</div>
-            <div>SEC / FCA / MAS Regulated</div>
-          </div>
-          <div>
-            <div class="text-[var(--color-fg-primary)] mb-1">Review Period</div>
-            <div>5-10 Business Days</div>
-          </div>
-        </div>
+    <!-- Requirements grid - 4-col equal -->
+    <div class="brutalist-grid grid-cols-2 md:grid-cols-4">
+      <div class="p-4 md:p-6 text-center">
+        <div class="macro-type text-2xl md:text-3xl mb-2">$1M</div>
+        <div class="data-readout">Minimum AUM</div>
+      </div>
+      <div class="p-4 md:p-6 text-center">
+        <div class="macro-type text-2xl md:text-3xl mb-2">FUND</div>
+        <div class="data-readout">Entity Type</div>
+      </div>
+      <div class="p-4 md:p-6 text-center">
+        <div class="macro-type text-2xl md:text-3xl mb-2">SEC</div>
+        <div class="data-readout">Regulated</div>
+      </div>
+      <div class="p-4 md:p-6 text-center">
+        <div class="macro-type text-2xl md:text-3xl mb-2">5-10d</div>
+        <div class="data-readout">Review Period</div>
       </div>
     </div>
   </div>

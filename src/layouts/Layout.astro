@@ -17,6 +17,43 @@ const { title, description = 'Tactical Intelligence Extraction System' } = Astro
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
   </head>
   <body class="scanlines noise">
+    <a href="#main-content" class="skip-link">Skip to content</a>
     <slot />
+    <div class="mobile-menu" id="mobile-menu" role="dialog" aria-label="Mobile navigation">
+      <button class="mobile-menu-close" id="mobile-menu-close" aria-label="Close menu">[ CLOSE ]</button>
+      <a href="#telemetry" class="mobile-menu-link">Telemetry</a>
+      <a href="#capabilities" class="mobile-menu-link">Capabilities</a>
+      <a href="#stats" class="mobile-menu-link">Analytics</a>
+      <a href="#access" class="mobile-menu-link">Request Access</a>
+    </div>
+    <script>
+      const menu = document.getElementById('mobile-menu');
+      const openBtn = document.getElementById('mobile-menu-open');
+      const closeBtn = document.getElementById('mobile-menu-close');
+      const links = document.querySelectorAll('.mobile-menu-link');
+
+      openBtn?.addEventListener('click', () => {
+        menu?.classList.add('is-open');
+        closeBtn?.focus();
+      });
+
+      closeBtn?.addEventListener('click', () => {
+        menu?.classList.remove('is-open');
+        openBtn?.focus();
+      });
+
+      links.forEach(link => {
+        link.addEventListener('click', () => {
+          menu?.classList.remove('is-open');
+        });
+      });
+
+      document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape' && menu?.classList.contains('is-open')) {
+          menu.classList.remove('is-open');
+          openBtn?.focus();
+        }
+      });
+    </script>
   </body>
 </html>

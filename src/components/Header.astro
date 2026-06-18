@@ -1,27 +1,33 @@
 ---
-// Header component - minimal tactical navigation
+// Header - minimal tactical nav
 ---
 
-<header class="border-b border-[var(--color-border)]">
+<header class="border-b border-[var(--color-border)] sticky top-0 z-50 bg-[var(--color-bg-primary)]">
   <div class="max-w-[1400px] mx-auto px-4 md:px-8">
     <div class="flex items-center justify-between h-16 md:h-20">
       <!-- Logo -->
-      <div class="flex items-center gap-4">
-        <span class="macro-type text-xl md:text-2xl tracking-tighter">NEXUS</span>
+      <a href="/" class="flex items-center gap-4 no-underline">
+        <span class="macro-type text-xl md:text-2xl tracking-tighter text-[var(--color-fg-primary)]">NEXUS</span>
         <span class="micro-type text-[10px] hidden md:block">TACTICAL AI SYS</span>
-      </div>
+      </a>
 
-      <!-- Nav -->
-      <nav class="hidden md:flex items-center gap-8">
+      <!-- Desktop Nav -->
+      <nav class="hidden md:flex items-center gap-8" aria-label="Main navigation">
         <a href="#telemetry" class="micro-type hover:text-[var(--color-accent)] transition-colors">Telemetry</a>
         <a href="#capabilities" class="micro-type hover:text-[var(--color-accent)] transition-colors">Capabilities</a>
         <a href="#stats" class="micro-type hover:text-[var(--color-accent)] transition-colors">Analytics</a>
-        <span class="micro-type text-[var(--color-fg-secondary)]">|</span>
+        <span class="micro-type text-[var(--color-border)]" aria-hidden="true">|</span>
         <a href="#access" class="btn-brutalist-accent btn-brutalist text-[10px] py-2 px-4">Request Access</a>
       </nav>
 
       <!-- Mobile menu trigger -->
-      <button class="md:hidden micro-type text-[var(--color-fg-secondary)]" aria-label="Menu">
+      <button
+        id="mobile-menu-open"
+        class="md:hidden micro-type text-[var(--color-fg-secondary)] hover:text-[var(--color-accent)] transition-colors bg-transparent border-none cursor-pointer"
+        aria-label="Open navigation menu"
+        aria-expanded="false"
+        aria-controls="mobile-menu"
+      >
         [ MENU ]
       </button>
     </div>

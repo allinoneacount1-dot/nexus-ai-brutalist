@@ -1,11 +1,8 @@
 ---
-// Footer component - minimal technical
+// Footer - minimal, no duplicate warning stripe
 ---
 
 <footer class="border-t border-[var(--color-border)]">
-  <!-- Warning stripe -->
-  <div class="warning-stripe"></div>
-
   <div class="max-w-[1400px] mx-auto px-4 md:px-8 py-8 md:py-12">
     <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
       <!-- Brand -->
@@ -20,29 +17,29 @@
       <!-- Links -->
       <div>
         <div class="micro-type mb-4 text-[var(--color-accent)]">Navigation</div>
-        <div class="space-y-2 data-readout">
-          <div><a href="#telemetry" class="hover:text-[var(--color-fg-primary)] transition-colors">/// Telemetry</a></div>
-          <div><a href="#capabilities" class="hover:text-[var(--color-fg-primary)] transition-colors">/// Capabilities</a></div>
-          <div><a href="#stats" class="hover:text-[var(--color-fg-primary)] transition-colors">/// Analytics</a></div>
-          <div><a href="#access" class="hover:text-[var(--color-fg-primary)] transition-colors">/// Request Access</a></div>
+        <div class="space-y-2">
+          <div><a href="#telemetry" class="data-readout hover:text-[var(--color-fg-primary)] transition-colors">/// Telemetry</a></div>
+          <div><a href="#capabilities" class="data-readout hover:text-[var(--color-fg-primary)] transition-colors">/// Capabilities</a></div>
+          <div><a href="#stats" class="data-readout hover:text-[var(--color-fg-primary)] transition-colors">/// Analytics</a></div>
+          <div><a href="#access" class="data-readout hover:text-[var(--color-fg-primary)] transition-colors">/// Request Access</a></div>
         </div>
       </div>
 
       <!-- Status -->
       <div>
         <div class="micro-type mb-4 text-[var(--color-accent)]">System Status</div>
-        <div class="space-y-2 data-readout">
+        <div class="space-y-2">
           <div class="flex items-center gap-2">
-            <span class="text-[var(--color-terminal-green)]">●</span>
-            <span>Neural Engine: Online</span>
+            <span class="text-[var(--color-terminal-green)]" aria-hidden="true">●</span>
+            <span class="data-readout">Neural Engine: Online</span>
           </div>
           <div class="flex items-center gap-2">
-            <span class="text-[var(--color-terminal-green)]">●</span>
-            <span>Data Pipeline: Active</span>
+            <span class="text-[var(--color-terminal-green)]" aria-hidden="true">●</span>
+            <span class="data-readout">Data Pipeline: Active</span>
           </div>
           <div class="flex items-center gap-2">
-            <span class="text-[var(--color-terminal-green)]">●</span>
-            <span>Inference Node: Ready</span>
+            <span class="text-[var(--color-terminal-green)]" aria-hidden="true">●</span>
+            <span class="data-readout">Inference Node: Ready</span>
           </div>
         </div>
       </div>
