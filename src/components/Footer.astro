@@ -1,12 +1,12 @@
 ---
-// Footer - more breathing room
+// Footer - centered content
 ---
 
 <footer class="border-t border-[var(--color-border)]">
   <div class="max-w-[1400px] mx-auto px-6 md:px-12 py-12 md:py-16">
     <div class="grid grid-cols-1 md:grid-cols-3 gap-12 mb-12">
       <!-- Brand -->
-      <div>
+      <div class="text-center md:text-left">
         <div class="macro-type text-xl mb-6">NEXUS AI</div>
         <div class="data-readout text-base">
           TACTICAL INTELLIGENCE<br/>
@@ -15,7 +15,7 @@
       </div>
 
       <!-- Links -->
-      <div>
+      <div class="text-center">
         <div class="micro-type mb-6 text-[var(--color-accent)]">Navigation</div>
         <div class="space-y-3">
           <div><a href="#telemetry" class="data-readout text-base hover:text-[var(--color-fg-primary)] transition-colors">/// Telemetry</a></div>
@@ -26,20 +26,20 @@
       </div>
 
       <!-- Status -->
-      <div>
+      <div class="text-center md:text-right">
         <div class="micro-type mb-6 text-[var(--color-accent)]">System Status</div>
         <div class="space-y-3">
-          <div class="flex items-center gap-3">
-            <span class="text-[var(--color-terminal-green)]" aria-hidden="true">●</span>
+          <div class="flex items-center justify-center md:justify-end gap-3">
             <span class="data-readout text-base">Neural Engine: Online</span>
-          </div>
-          <div class="flex items-center gap-3">
             <span class="text-[var(--color-terminal-green)]" aria-hidden="true">●</span>
+          </div>
+          <div class="flex items-center justify-center md:justify-end gap-3">
             <span class="data-readout text-base">Data Pipeline: Active</span>
-          </div>
-          <div class="flex items-center gap-3">
             <span class="text-[var(--color-terminal-green)]" aria-hidden="true">●</span>
+          </div>
+          <div class="flex items-center justify-center md:justify-end gap-3">
             <span class="data-readout text-base">Inference Node: Ready</span>
+            <span class="text-[var(--color-terminal-green)]" aria-hidden="true">●</span>
           </div>
         </div>
       </div>
@@ -47,12 +47,13 @@
 
     <!-- Bottom bar -->
     <div class="border-t border-[var(--color-border)] pt-8">
-      <div class="flex flex-wrap items-center justify-between gap-4">
+      <div class="flex flex-wrap items-center justify-center gap-4">
         <div class="data-readout text-base">
           © {new Date().getFullYear()} NEXUS AI SYSTEMS // ALL RIGHTS RESERVED
         </div>
+        <div class="text-[var(--color-border)]" aria-hidden="true">|</div>
         <div class="data-readout text-base">
-          REV 2.6 // BUILD {Math.floor(Date.now() / 1000)} // CLASSIFICATION: PUBLIC
+          REV 2.6 // CLASSIFICATION: PUBLIC
         </div>
       </div>
     </div>
