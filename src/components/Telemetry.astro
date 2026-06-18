@@ -1,0 +1,71 @@
+---
+// Telemetry section - data grid with real-time feel
+---
+
+<section id="telemetry" class="border-b border-[var(--color-border)]">
+  <div class="max-w-[1400px] mx-auto">
+    <!-- Section header -->
+    <div class="border-b border-[var(--color-border)] px-4 md:px-8 py-4">
+      <div class="flex items-center justify-between">
+        <h2 class="macro-type text-lg md:text-xl">
+          <span class="ascii-frame">Telemetry</span>
+        </h2>
+        <span class="micro-type text-[10px]">LIVE FEED</span>
+      </div>
+    </div>
+
+    <!-- Telemetry grid -->
+    <div class="brutalist-grid grid-cols-1 md:grid-cols-3">
+      <!-- Panel 1 -->
+      <div class="p-6 md:p-8">
+        <div class="micro-type mb-4 text-[var(--color-accent)]">Neural Processing</div>
+        <div class="macro-type text-4xl md:text-5xl mb-2">847</div>
+        <div class="data-readout">Queries processed / 24h</div>
+        <div class="sep my-4"></div>
+        <div class="data-readout">
+          AVG LATENCY: 142ms<br/>
+          P99 LATENCY: 289ms<br/>
+          ERROR RATE: 0.03%
+        </div>
+      </div>
+
+      <!-- Panel 2 -->
+      <div class="p-6 md:p-8">
+        <div class="micro-type mb-4 text-[var(--color-accent)]">Model Performance</div>
+        <div class="macro-type text-4xl md:text-5xl mb-2">97.3<span class="text-2xl">%</span></div>
+        <div class="data-readout">Accuracy index / benchmark</div>
+        <div class="sep my-4"></div>
+        <div class="data-readout">
+          F1 SCORE: 0.967<br/>
+          AUC-ROC: 0.984<br/>
+          INFERENCE: 142ms
+        </div>
+      </div>
+
+      <!-- Panel 3 -->
+      <div class="p-6 md:p-8">
+        <div class="micro-type mb-4 text-[var(--color-accent)]">System Health</div>
+        <div class="macro-type text-4xl md:text-5xl mb-2">99.97<span class="text-2xl">%</span></div>
+        <div class="data-readout">Uptime / availability</div>
+        <div class="sep my-4"></div>
+        <div class="data-readout">
+          CPU USAGE: 23.4%<br/>
+          MEMORY: 67.2%<br/>
+          GPU UTIL: 89.1%
+        </div>
+      </div>
+    </div>
+
+    <!-- Bottom data strip -->
+    <div class="border-t border-[var(--color-border)] px-4 md:px-8 py-3">
+      <div class="flex flex-wrap items-center justify-between gap-4">
+        <div class="data-readout">
+          LAST UPDATE: {new Date().toLocaleTimeString('en-US', { hour12: false })} UTC
+        </div>
+        <div class="data-readout">
+          <span class="text-[var(--color-terminal-green)]">●</span> ALL SYSTEMS NOMINAL
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
