@@ -1,8 +1,8 @@
 ---
-// Hero
+// Hero - extreme brutalist
 ---
 
-<section class="border-b border-[var(--color-border)] hero-full relative overflow-hidden bg-[var(--color-bg-primary)]">
+<section class="border-b-2 border-[var(--color-border)] relative overflow-hidden bg-[var(--color-bg-primary)]">
   <div class="warning-stripe"></div>
 
   <svg class="geo-mark" viewBox="0 0 400 400" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
@@ -16,60 +16,79 @@
     <line x1="180" y1="220" x2="220" y2="220" stroke="currentColor" stroke-width="1" opacity="0.3"/>
   </svg>
 
-  <div class="wrap relative z-10 pb-20 md:pb-0">
-    <div class="flex flex-wrap items-center justify-center gap-6 mb-20 md:mb-32">
-      <div class="data-readout">SYS.STATUS: <span class="text-[var(--color-terminal-green)]">OPERATIONAL</span></div>
+  <div class="wrap relative z-10 pb-16 md:pb-24 pt-8">
+    <!-- Top status bar -->
+    <div class="flex flex-wrap items-center justify-center gap-4 mb-12 md:mb-20">
+      <div class="micro-type text-[10px]">SYS.STATUS: <span class="text-[var(--color-terminal-green)]">OPERATIONAL</span></div>
       <div class="text-[var(--color-border)]" aria-hidden="true">|</div>
-      <div class="data-readout">REV 2.6 // UNIT / D-01 // CLASSIFICATION: PUBLIC</div>
+      <div class="micro-type text-[10px]">REV 2.6 // UNIT / D-01</div>
+      <div class="text-[var(--color-border)]" aria-hidden="true">|</div>
+      <div class="micro-type text-[10px]">CLASSIFICATION: PUBLIC</div>
     </div>
 
-    <div class="text-center">
-      <h1 class="macro-type type-hero mb-8 md:mb-12">NEXUS<br/><span class="text-[var(--color-accent)]">AI</span></h1>
-      <div class="accent-line w-40 md:w-64 mx-auto mb-8 md:mb-12"></div>
-      <div style="text-align: center; margin: 0 auto 3rem; max-width: 672px;">
-        <p style="font-family: var(--font-mono); color: var(--color-fg-secondary); text-transform: uppercase; letter-spacing: 0.12em; line-height: 1.8; font-size: 0.75rem;">
-          [ TACTICAL INTELLIGENCE EXTRACTION SYSTEM FOR AUTONOMOUS DECISION-MAKING ARCHITECTURES ]
-        </p>
-      </div>
-      <div class="flex flex-wrap justify-center gap-6 mb-16">
-        <a href="#access" class="btn-brutalist-accent btn-brutalist">[ Request Access → ]</a>
-        <a href="#telemetry" class="btn-brutalist">[ View Telemetry ]</a>
+    <!-- Main headline - extreme scale -->
+    <div class="text-center mb-8">
+      <h1 style="font-family: var(--font-display); text-transform: uppercase; letter-spacing: -0.06em; line-height: 0.85; font-weight: 900; font-size: clamp(5rem, 18vw, 20rem);">
+        NEXUS
+      </h1>
+      <div style="font-family: var(--font-display); text-transform: uppercase; letter-spacing: -0.06em; line-height: 0.85; font-weight: 900; font-size: clamp(5rem, 18vw, 20rem); color: var(--color-accent);">
+        AI
       </div>
     </div>
 
+    <!-- Accent line -->
+    <div class="flex justify-center mb-8">
+      <div class="accent-line w-32 md:w-48"></div>
+    </div>
+
+    <!-- Micro description -->
+    <div style="text-align: center; margin: 0 auto 3rem; max-width: 672px;">
+      <p style="font-family: var(--font-mono); color: var(--color-fg-secondary); text-transform: uppercase; letter-spacing: 0.12em; line-height: 1.8; font-size: 0.75rem;">
+        [ TACTICAL INTELLIGENCE EXTRACTION SYSTEM FOR AUTONOMOUS DECISION-MAKING ARCHITECTURES ]
+      </p>
+    </div>
+
+    <!-- Buttons -->
+    <div class="flex flex-wrap justify-center gap-4 mb-12">
+      <a href="#access" class="btn-brutalist-accent btn-brutalist text-[10px]">[ REQUEST ACCESS → ]</a>
+      <a href="#telemetry" class="btn-brutalist text-[10px]">[ VIEW TELEMETRY ]</a>
+    </div>
+
+    <!-- Data panel - centered -->
     <div class="flex justify-center">
-      <div class="border border-[var(--color-border)] p-6 md:p-8 w-full max-w-md">
-        <div class="micro-type mb-6 text-[var(--color-accent)] text-center">System Parameters</div>
-        <div class="space-y-4">
-          <div class="flex justify-between border-b border-[var(--color-border)] pb-3">
-            <span class="data-readout">Model Version</span>
-            <span class="data-readout text-[var(--color-fg-primary)]">NEXUS-7.2.1</span>
+      <div class="border-2 border-[var(--color-border)] p-4 md:p-6 w-full max-w-sm">
+        <div class="micro-type text-[10px] mb-4 text-[var(--color-accent)] text-center">[ SYSTEM PARAMETERS ]</div>
+        <div class="space-y-2">
+          <div class="flex justify-between border-b border-[var(--color-border)] pb-2">
+            <span class="micro-type text-[10px]">MODEL VERSION</span>
+            <span class="micro-type text-[10px] text-[var(--color-fg-primary)]">NEXUS-7.2.1</span>
           </div>
-          <div class="flex justify-between border-b border-[var(--color-border)] pb-3">
-            <span class="data-readout">Training Data</span>
-            <span class="data-readout text-[var(--color-fg-primary)]">42.8B TOKENS</span>
+          <div class="flex justify-between border-b border-[var(--color-border)] pb-2">
+            <span class="micro-type text-[10px]">TRAINING DATA</span>
+            <span class="micro-type text-[10px] text-[var(--color-fg-primary)]">42.8B TOKENS</span>
           </div>
-          <div class="flex justify-between border-b border-[var(--color-border)] pb-3">
-            <span class="data-readout">Inference Speed</span>
-            <span class="data-readout text-[var(--color-terminal-green)]">142ms</span>
+          <div class="flex justify-between border-b border-[var(--color-border)] pb-2">
+            <span class="micro-type text-[10px]">INFERENCE SPEED</span>
+            <span class="micro-type text-[10px] text-[var(--color-terminal-green)]">142MS</span>
           </div>
-          <div class="flex justify-between border-b border-[var(--color-border)] pb-3">
-            <span class="data-readout">Accuracy Index</span>
-            <span class="data-readout text-[var(--color-fg-primary)]">97.3%</span>
+          <div class="flex justify-between border-b border-[var(--color-border)] pb-2">
+            <span class="micro-type text-[10px]">ACCURACY INDEX</span>
+            <span class="micro-type text-[10px] text-[var(--color-fg-primary)]">97.3%</span>
           </div>
           <div class="flex justify-between">
-            <span class="data-readout">Uptime</span>
-            <span class="data-readout text-[var(--color-terminal-green)]">99.97%</span>
+            <span class="micro-type text-[10px]">UPTIME</span>
+            <span class="micro-type text-[10px] text-[var(--color-terminal-green)]">99.97%</span>
           </div>
         </div>
       </div>
     </div>
 
-    <div class="mt-20 md:mt-32 pt-8 border-t border-[var(--color-border)]">
-      <div class="flex flex-wrap items-center justify-center gap-6">
-        <div class="data-readout">[ COORDINATES: 40.7128N / 74.0060W ]</div>
+    <!-- Bottom coordinates -->
+    <div class="mt-12 pt-4 border-t border-[var(--color-border)]">
+      <div class="flex flex-wrap items-center justify-center gap-4">
+        <div class="micro-type text-[10px]">[ COORDINATES: 40.7128N / 74.0060W ]</div>
         <div class="text-[var(--color-border)]" aria-hidden="true">|</div>
-        <div class="data-readout">SESSION: {new Date().toISOString().split('T')[0].replace(/-/g, '.')} // NODE: US-EAST-1</div>
+        <div class="micro-type text-[10px]">SESSION: {new Date().toISOString().split('T')[0].replace(/-/g, '.')} // NODE: US-EAST-1</div>
       </div>
     </div>
   </div>

@@ -1,28 +1,28 @@
 ---
-// Header
+// Header - minimal tactical
 ---
 
-<header class="border-b border-[var(--color-border)] sticky top-0 z-50 bg-[var(--color-bg-primary)]">
+<header class="border-b-2 border-[var(--color-border)] sticky top-0 z-50 bg-[var(--color-bg-primary)]">
   <div class="wrap">
-    <div class="flex items-center justify-between h-20 md:h-24">
-      <a href="/" class="flex items-center gap-4 no-underline">
-        <span class="macro-type text-xl md:text-2xl tracking-tighter text-[var(--color-fg-primary)]">NEXUS</span>
-        <span class="micro-type text-[10px] hidden md:block">TACTICAL AI SYS</span>
+    <div class="flex items-center justify-between h-16 md:h-20">
+      <a href="/" class="flex items-center gap-3 no-underline">
+        <span class="macro-type text-lg md:text-xl tracking-tighter text-[var(--color-fg-primary)]">NEXUS</span>
+        <span class="micro-type text-[8px] hidden md:block">TACTICAL AI SYS v2.6</span>
       </a>
 
-      <nav class="hidden md:flex items-center gap-10" aria-label="Main navigation">
-        <a href="#telemetry" class="micro-type hover:text-[var(--color-accent)] transition-colors">Telemetry</a>
-        <a href="#capabilities" class="micro-type hover:text-[var(--color-accent)] transition-colors">Capabilities</a>
-        <a href="#stats" class="micro-type hover:text-[var(--color-accent)] transition-colors">Analytics</a>
+      <nav class="hidden md:flex items-center gap-8" aria-label="Main navigation">
+        <a href="#telemetry" class="micro-type text-[10px] hover:text-[var(--color-accent)] transition-colors">[ TELEMETRY ]</a>
+        <a href="#capabilities" class="micro-type text-[10px] hover:text-[var(--color-accent)] transition-colors">[ CAPABILITIES ]</a>
+        <a href="#stats" class="micro-type text-[10px] hover:text-[var(--color-accent)] transition-colors">[ ANALYTICS ]</a>
       </nav>
 
       <div class="hidden md:block">
-        <a href="#access" class="btn-brutalist-accent btn-brutalist text-[10px] py-2 px-4">Request Access</a>
+        <a href="#access" class="btn-brutalist-accent btn-brutalist text-[10px] py-1.5 px-3">[ REQUEST ACCESS ]</a>
       </div>
 
       <button
         id="mobile-menu-open"
-        class="md:hidden micro-type text-[var(--color-fg-secondary)] hover:text-[var(--color-accent)] transition-colors bg-transparent border-none cursor-pointer"
+        class="md:hidden micro-type text-[10px] text-[var(--color-fg-secondary)] hover:text-[var(--color-accent)] transition-colors bg-transparent border border-[var(--color-border)] cursor-pointer px-2 py-1"
         aria-label="Open navigation menu"
         aria-expanded="false"
         aria-controls="mobile-menu"
