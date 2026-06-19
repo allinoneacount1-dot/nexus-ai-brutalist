@@ -370,9 +370,6 @@ body {
 /* Hero full viewport */
 .hero-full {
   min-height: 100dvh;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
 }
 
 /* Geometric mark for hero */
